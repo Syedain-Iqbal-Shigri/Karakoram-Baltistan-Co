@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function DashboardLayout({
   children,
 }: {
@@ -10,27 +12,20 @@ export default function DashboardLayout({
           KBC Admin
         </h1>
         <nav className="space-y-2">
-          
-            href="/dashboard"
-            className="block px-4 py-2 rounded-lg hover:bg-emerald-50 text-stone-700"
-          >
+          <Link href="/dashboard" className="block px-4 py-2 rounded-lg text-stone-600 hover:bg-emerald-50 hover:text-emerald-700">
             Overview
-          </a>
-          
-            href="/dashboard/bookings"
-            className="block px-4 py-2 rounded-lg hover:bg-emerald-50 text-stone-700"
-          >
+          </Link>
+          <Link href="/dashboard/bookings" className="block px-4 py-2 rounded-lg text-stone-600 hover:bg-emerald-50 hover:text-emerald-700">
             Bookings
-          </a>
-          
-            href="/dashboard/treks"
-            className="block px-4 py-2 rounded-lg hover:bg-emerald-50 text-stone-700"
-          >
+          </Link>
+          <Link href="/dashboard/treks" className="block px-4 py-2 rounded-lg text-stone-600 hover:bg-emerald-50 hover:text-emerald-700">
             Trek Packages
-          </a>
+          </Link>
         </nav>
       </aside>
-      <main className="flex-1 p-8">{children}</main>
+      <main className="flex-1 p-8">
+        {children}
+      </main>
     </div>
   )
 }
