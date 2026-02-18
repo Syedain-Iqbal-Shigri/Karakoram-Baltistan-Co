@@ -12,6 +12,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   outputFileTracingRoot: path.join(__dirname, '../../'),
+  experimental: {
+    outputFileTracingIncludes: {
+      '/': ['./src/**/*'],
+    },
+  },
 }
 
 export default nextConfig
